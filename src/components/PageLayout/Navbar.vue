@@ -26,7 +26,7 @@ defineProps({
         class="navbar-brand font-weight-bolder ms-lg-0 ms-3"
         :class="darkMode ? 'text-black' : 'text-white'"
         to="/"
-        >Argon Dashboard 2</router-link
+        >El Rayan</router-link
       >
       <button
         class="shadow-none navbar-toggler ms-2"
@@ -80,14 +80,14 @@ defineProps({
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link me-2" to="/signin">
+            <a class="nav-link me-2">
               <i
                 class="fas fa-key opacity-6 me-1"
                 aria-hidden="true"
                 :class="isBlur ? 'text-dark' : 'text-white'"
               ></i>
               Sign In
-            </router-link>
+            </a>
           </li>
         </ul>
         <ul class="navbar-nav d-lg-block d-none">

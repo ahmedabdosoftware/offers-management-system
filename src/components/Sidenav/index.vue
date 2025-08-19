@@ -33,15 +33,15 @@ const darkMode = computed(() => store.state.darkMode);
         id="iconSidenav"
       ></i>
 
-      <router-link class="m-0 navbar-brand" to="/">
+      <a class="m-0 navbar-brand">
         <img
           :src="darkMode || sidebarType === 'bg-default' ? logoWhite : logo"
           class="navbar-brand-img h-100"
           alt="main_logo"
         />
 
-        <span class="ms-2 font-weight-bold me-2">Argon Dashboard 2</span>
-      </router-link>
+        <span class="ms-2 font-weight-bold me-2">El Rayan</span>
+      </a>
     </div>
 
     <hr class="mt-0 horizontal dark" />

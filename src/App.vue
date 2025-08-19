@@ -15,10 +15,10 @@ Coded by www.creative-tim.com
 <script setup>
 import { computed } from "vue";
 import { useStore } from "vuex";
-import Sidenav from "./examples/Sidenav";
-import Configurator from "@/examples/Configurator.vue";
-import Navbar from "@/examples/Navbars/Navbar.vue";
-import AppFooter from "@/examples/Footer.vue";
+import Sidenav from "./components/Sidenav";
+import Configurator from "@/components/Configurator.vue";
+import Navbar from "@/components/Navbars/Navbar.vue";
+import AppFooter from "@/components/Footer.vue";
 
 const store = useStore();
 const isNavFixed = computed(() => store.state.isNavFixed);
