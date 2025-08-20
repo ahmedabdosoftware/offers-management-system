@@ -40,7 +40,7 @@ const darkMode = computed(() => store.state.darkMode);
           alt="main_logo"
         />
 
-        <span class="ms-2 font-weight-bold me-2">El Rayan</span>
+        <span class="ms-2 font-weight-bold me-2">El osoal</span>
       </a>
     </div>
 
