@@ -26,10 +26,10 @@ const getRoute = () => {
         <sidenav-item
           to="/Offers"
           :class="getRoute() === 'Offers' ? 'active' : ''"
-          :navText="isRTL ? 'العروض' : 'Offers'"
+          :navText="isRTL ? 'العروض' : 'offers'"
         >
-          <template v-slot:icon>
-            <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+         <template v-slot:icon>
+            <i class="fas fa-gift text-danger text-sm opacity-100"></i>
           </template>
         </sidenav-item>
       </li>

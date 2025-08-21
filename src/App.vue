@@ -1,22 +1,15 @@
 <!--
 =========================================================
-* Vue Argon Dashboard 2 - v4.0.0
+* OFFERS - TASK
 =========================================================
-
-* Product Page: https://creative-tim.com/product/vue-argon-dashboard
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
 
 =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <script setup>
 import { computed } from "vue";
 import { useStore } from "vuex";
 import Sidenav from "./components/Sidenav";
-import Configurator from "@/components/Configurator.vue";
 import Navbar from "@/components/Navbars/Navbar.vue";
 import AppFooter from "@/components/Footer.vue";
 
@@ -28,10 +21,6 @@ const showSidenav = computed(() => store.state.showSidenav);
 const layout = computed(() => store.state.layout);
 const showNavbar = computed(() => store.state.showNavbar);
 const showFooter = computed(() => store.state.showFooter);
-const showConfig = computed(() => store.state.showConfig);
-const hideConfigButton = computed(() => store.state.hideConfigButton);
-const toggleConfigurator = () => store.commit("toggleConfigurator");
-
 const navClasses = computed(() => {
   return {
     "position-sticky bg-white left-auto top-2 z-index-sticky":
@@ -61,10 +50,5 @@ const navClasses = computed(() => {
     <router-view />
 
     <app-footer v-show="showFooter" />
-
-    <configurator
-      :toggle="toggleConfigurator"
-      :class="[showConfig ? 'show' : '', hideConfigButton ? 'd-none' : '']"
-    />
   </main>
 </template>
