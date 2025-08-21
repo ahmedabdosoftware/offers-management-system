@@ -140,6 +140,14 @@ import { Form as VeeForm } from "vee-validate";
 
 import * as Yup from "yup";
 
+// ==========================
+// ⚠️ ⚠️ ⚠️ IMPORTANT NOTICE
+// THIS COMPONENT ADD OFFERS FROM THE STORE
+// JUST FOR CIRCLE INTEGRATION / FRONT-END DEMO
+// DATA IS STATIC / MOCKED VIA STORE
+// ============================================
+
+//////////import { useOfferStore } from "@/stores/offerStore";//////////////
 export default {
   props: {
     modelValue: Boolean,

@@ -44,6 +44,16 @@ import DeleteDialog from "@/components/Offers/DeleteDialog.vue";
 import { toast } from "vue3-toastify";
 import QRCode from "qrcode";
 
+
+// ==========================
+// ⚠️ ⚠️ ⚠️ IMPORTANT NOTICE
+// THIS COMPONENT FETCHES OFFERS FROM THE STORE
+// JUST FOR CIRCLE INTEGRATION / FRONT-END DEMO
+// DATA IS STATIC / MOCKED VIA STORE
+// ============================================
+
+//////////import { useOfferStore } from "@/stores/offerStore";//////////////
+
 export default {
   components: { OffersTable, OfferForm, DeleteDialog },
   data() {
