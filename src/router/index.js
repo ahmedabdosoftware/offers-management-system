@@ -2,14 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Offers from "../views/Offers.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "/",
-    redirect: "/dashboard-default",
-  },
  
   {
-    path: "/Offers",
+    path: "/",
     name: "Offers",
     component: Offers,
   },

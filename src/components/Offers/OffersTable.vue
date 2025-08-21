@@ -166,20 +166,44 @@
         </div>
     </template>
 
-    <!-- Actions -->
+      <!-- Actions -->
     <template #[`item.actions`]="{ item }">
-        <div class="text-center">
-        <v-btn icon x-small color="blue" class="mx-1" @click="$emit('edit', item)">
-            <v-icon small>mdi-pencil</v-icon>
+      <div class="d-flex justify-center align-center">
+        <v-btn
+          icon
+          density="compact"
+          size="28"
+          class="mx-1"
+          color="blue"
+          @click="$emit('edit', item)"
+        >
+          <v-icon size="16">mdi-pencil</v-icon>
         </v-btn>
-        <v-btn icon x-small color="red" class="mx-1" @click="$emit('delete', item)">
-            <v-icon small>mdi-delete</v-icon>
+
+        <v-btn
+          icon
+          density="compact"
+          size="28"
+          class="mx-1"
+          color="red"
+          @click="$emit('delete', item)"
+        >
+          <v-icon size="16">mdi-delete</v-icon>
         </v-btn>
-        <v-btn icon x-small color="green" class="mx-1" @click="$emit('qr', item.offer_number)">
-            <v-icon small>mdi-qrcode</v-icon>
+
+        <v-btn
+          icon
+          density="compact"
+          size="28"
+          class="mx-1"
+          color="green"
+          @click="$emit('qr', item.offer_number)"
+        >
+          <v-icon size="16">mdi-qrcode</v-icon>
         </v-btn>
-        </div>
+      </div>
     </template>
+
    </v-data-table>
   </div>
 </template>
@@ -256,7 +280,11 @@ export default {
           matchesAmountMin &&
           matchesAmountMax
         );
-      });
+      })
+       .map(o => ({
+        ...o,
+        actions: true, // Add actions property for the template
+      }));
     },
   },
   methods: {
@@ -278,9 +306,29 @@ export default {
 </script>
 <style scoped>
 ::v-deep(.v-field__overlay) {
-    border-radius: inherit;
-    pointer-events: none;
-    background-color: white !important;
+  border: 2px solid #011529;
+  border-radius: 10px;
+  pointer-events: none;
+  background-color: white !important;
 }
 
+::v-deep(.v-label) {
+  font-weight: normal !important;
+  font-size: 17px !important;
+}
+
+::v-deep(input::placeholder) {
+  font-weight: normal !important;
+  font-size: 17px !important;
+}
+::v-deep(.v-field__outline) {
+  display: none !important;
+}
+
+::v-deep(.v-field__loader) {
+  display: none !important;
+}
+::v-deep(.v-field--center-affix .v-label.v-field-label) {
+    font-size: 12px !important;
+}
 </style>

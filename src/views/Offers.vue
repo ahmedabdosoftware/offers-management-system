@@ -4,7 +4,7 @@
       <v-card elevation="6" class="rounded-xl">
         <v-card-title class="d-flex justify-space-between align-center">
           <h4 class="text-white">Offers List</h4>
-          <v-btn color="green darken-2" dark @click="openAddDialog" class="rounded-pill px-4">
+          <v-btn color="primary darken-2" dark @click="openAddDialog" class="rounded-pill px-4">
             <v-icon left>mdi-plus</v-icon>
             Add New Offer
           </v-btn>
